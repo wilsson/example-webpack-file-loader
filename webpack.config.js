@@ -15,18 +15,10 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpg|jpeg|gif|svg)$/,
+                test: /\.(jpe?g|png|svg|woff2|woff|ttf|eot)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[path][name][hash].[ext]',
-                    publicPath: '/'
-                }
-            },
-            {
-                test: /\.(eot|otf|svg|ttf|woff)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name][hash].[ext]',
+                    name: '[name][hash].[ext]',
                     publicPath: '/'
                 }
             }
